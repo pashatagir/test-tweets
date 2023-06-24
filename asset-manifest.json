@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/test-tweets/static/css/main.a48449dd.css",
+    "main.js": "/test-tweets/static/js/main.93ef69a5.js",
+    "static/media/TopCard.png": "/test-tweets/static/media/TopCard.032662a2a907475127d7.png",
+    "index.html": "/test-tweets/index.html",
+    "main.a48449dd.css.map": "/test-tweets/static/css/main.a48449dd.css.map",
+    "main.93ef69a5.js.map": "/test-tweets/static/js/main.93ef69a5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a48449dd.css",
+    "static/js/main.93ef69a5.js"
+  ]
+}
