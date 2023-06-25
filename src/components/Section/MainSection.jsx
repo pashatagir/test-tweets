@@ -1,9 +1,9 @@
 import { LoadMoreBtn } from 'components/Buttons/Buttons';
-import { StatusFilter } from 'components/Filters/Filters';
+// import { StatusFilter } from 'components/Filters/Filters';
 import { ListCards } from 'components/ListCards/ListCards';
 import { Loader } from 'components/Loader/Loader';
 import {
-  ButtonFilters,
+  // ButtonFilters,
   CardsContainer,
   Navlink,
   SectionContainer,
@@ -13,7 +13,10 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { fetchUsers } from 'redux/usersOperations';
-import { selectState, selectVisibleUsers } from 'redux/usersSelectors';
+import {
+  selectState,
+  // selectVisibleUsers
+} from 'redux/usersSelectors';
 
 export const MainSection = () => {
   const location = useLocation();
@@ -34,7 +37,7 @@ export const MainSection = () => {
     }
   };
 
-  const users = useSelector(selectVisibleUsers);
+  // const users = useSelector(selectVisibleUsers);
 
   // const onSelectFilter = slice => {
   //   return slice.filter(item => !item.isFollower);
