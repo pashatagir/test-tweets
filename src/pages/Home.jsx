@@ -1,16 +1,19 @@
 import { Container, Title } from 'components/Style/Style.styled';
-import { GiRotaryPhone } from 'react-icons/gi';
+import { GiNestBirds } from 'react-icons/gi';
 
 const Home = () => {
   return (
     <Container>
       <Title>
-        <span role="img" aria-label="Greeting icon">
-          <GiRotaryPhone
-            style={{ width: '120px', height: '120px', fill: 'teal' }}
-          />
-        </span>
-        Your phonebook welcome page!
+        Your tweetbook welcome page!
+        <GiNestBirds
+          style={{
+            width: '320px',
+            height: '320px',
+            fill: '#5736a3',
+            marginTop: 50,
+          }}
+        />
       </Title>
     </Container>
   );

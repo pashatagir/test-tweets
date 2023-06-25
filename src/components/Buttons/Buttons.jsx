@@ -1,26 +1,26 @@
-import { Button, useColorMode } from '@chakra-ui/react';
-import { MdLightMode } from 'react-icons/md';
+import { BtnFilter, ButtonFollows } from 'components/Style/Style.styled';
 
-export const BtnToggleTheme = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
-  return (
-    <Button
-      leftIcon={<MdLightMode />}
-      colorScheme="teal"
-      p="5px"
-      size="xs"
-      variant="outline"
-      onClick={toggleColorMode}
-    >
-      {colorMode === 'light' ? 'Dark' : 'Light'}
-    </Button>
-  );
-};
+export const LoadMoreBtn = ({ onClick }) => (
+  <ButtonFollows
+    type="button"
+    onClick={onClick}
+    style={{
+      backgroundColor: '#5CD3A8',
+    }}
+  >
+    Load more
+  </ButtonFollows>
+);
 
-export const BtnSubmitAuth = ({ children }) => {
+export const ButtonFilter = ({
+  selected = false,
+  type = 'button',
+  children,
+  ...otherProps
+}) => {
   return (
-    <Button colorScheme="teal" size="sm" type="submit">
+    <BtnFilter type={type} {...otherProps}>
       {children}
-    </Button>
+    </BtnFilter>
   );
 };

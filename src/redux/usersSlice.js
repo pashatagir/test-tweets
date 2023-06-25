@@ -1,7 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { fetchUsers, changeUser } from "./usersOperations";
+import { createSlice } from '@reduxjs/toolkit';
+import { fetchUsers, changeUser } from './usersOperations';
 
-const handlePending = (state) => {
+const handlePending = state => {
   state.isLoading = true;
 };
 
@@ -11,7 +11,7 @@ const handleRejected = (state, action) => {
 };
 
 export const usersSlice = createSlice({
-  name: "users",
+  name: 'users',
   initialState: {
     items: [],
     isLoading: false,
@@ -19,7 +19,7 @@ export const usersSlice = createSlice({
     page: 1,
     limit: 3,
   },
-  extraReducers: (builder) => {
+  extraReducers: builder => {
     builder
       .addCase(fetchUsers.pending, handlePending)
       .addCase(fetchUsers.fulfilled, (state, action) => {
@@ -27,6 +27,7 @@ export const usersSlice = createSlice({
         state.error = null;
         state.items = action.payload;
         state.page = action.payload;
+        state.limit = action.payload;
       })
       .addCase(fetchUsers.rejected, handleRejected)
 
@@ -35,7 +36,7 @@ export const usersSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         const index = state.items.findIndex(
-          (item) => item.id === action.payload.id
+          item => item.id === action.payload.id
         );
         state.items.splice(index, 1, action.payload);
       })
