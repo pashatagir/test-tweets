@@ -198,19 +198,3 @@ export const ButtonFilters = styled.button`
     text-shadow: 2px 2px 5px #000000;
   }
 `;
-
-export const BtnFilter = styled.button`
-  background-color: transparent;
-  border: none;
-  padding: 12px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.2;
-  text-transform: uppercase;
-  color: #5736a3;
-  cursor: pointer;
-  &:hover {
-    color: #ffffff;
-    text-shadow: 2px 2px 5px #000000;
-  }
-`;

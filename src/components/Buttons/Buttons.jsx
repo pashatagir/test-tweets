@@ -1,4 +1,4 @@
-import { BtnFilter, ButtonFollows } from 'components/Style/Style.styled';
+import { ButtonFollows } from 'components/Style/Style.styled';
 
 export const LoadMoreBtn = ({ onClick }) => (
   <ButtonFollows
@@ -11,16 +11,3 @@ export const LoadMoreBtn = ({ onClick }) => (
     Load more
   </ButtonFollows>
 );
-
-export const ButtonFilter = ({
-  selected = false,
-  type = 'button',
-  children,
-  ...otherProps
-}) => {
-  return (
-    <BtnFilter type={type} {...otherProps}>
-      {children}
-    </BtnFilter>
-  );
-};

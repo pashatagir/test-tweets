@@ -16,8 +16,6 @@ export const usersSlice = createSlice({
     items: [],
     isLoading: false,
     error: null,
-    page: 1,
-    limit: 3,
   },
   extraReducers: builder => {
     builder
@@ -26,8 +24,6 @@ export const usersSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.items = action.payload;
-        state.page = action.payload;
-        state.limit = action.payload;
       })
       .addCase(fetchUsers.rejected, handleRejected)
 
